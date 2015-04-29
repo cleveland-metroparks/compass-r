@@ -9,6 +9,8 @@ To use install ```exif``` and imagemagick first, e.g.:
 
 Then run in directory with images:
 
-```./arrow.sh```
+```
+./arrow.sh
+```
 
 Requirements: Written for Ubuntu, but likely works on other Linux and Unix systems.
