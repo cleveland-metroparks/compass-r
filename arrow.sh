@@ -8,8 +8,6 @@ do
 	name=`echo $image | awk -F'.' '{print $1}'` 	
 	# extract angle from EXIF, and turn into variable
 	angle=`exif $image | grep 'Image Direction' | awk 'BEGIN { FS = "|" } ; { print $2 }' | sed 's/M//g' | xargs`
-	# calculate angle in cartesian coordinates
-	angle=`echo 90 - $angle | bc`
 	
 	# create rotated and scaled arrow for image
 	convert -rotate $angle -transparent white -resize 300x300 arrow-hi.png arrow-hi_$angle.png
